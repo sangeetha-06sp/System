@@ -3,12 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>My Upgraded Web Page</title>
+    <!-- Basic CSS for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Hello, World!</h1>
-    <p>This is a basic paragraph of text on my new website.</p>
+    <!-- 1. Header & Navigation Links -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <a href="#about">About</a> | 
+            <a href="#gallery">Gallery</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- 2. About Section with a Link -->
+        <section id="about">
+            <h2>About This Page</h2>
+            <p>I have added some exciting new features to this HTML code. You can now explore images, interactive buttons, and even send messages.</p>
+            <p>Learn more on <a href="https://wikipedia.org" target="_blank">Wikipedia</a>.</p>
+        </section>
+
+        <hr>
+
+        <!-- 3. Image Section -->
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <!-- Replace the URL with your own image link -->
+            <img src="https://placeholder.com" alt="Placeholder Image" style="max-width:100%; height:auto; border-radius:5px;">
+        </section>
+
+        <hr>
+
+        <!-- 4. Interactive Button with JavaScript -->
+        <section>
+            <h2>Interactive Feature</h2>
+            <button onclick="showAlert()">Click Me!</button>
+        </section>
+
+        <hr>
+
+        <!-- 5. Contact Form -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Submit Form</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Simple JavaScript for the button alert -->
+    <script>
+        function showAlert() {
+            alert("Hello! You clicked the feature button.");
+        }
+    </script>
 
 </body>
 </html>
